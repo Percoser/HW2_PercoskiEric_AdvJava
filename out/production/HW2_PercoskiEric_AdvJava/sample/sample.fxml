@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox prefHeight="455.0" prefWidth="894.0" style="-fx-background-color: #720005;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #440000;">
+         <children>
+             <JFXButton fx:id="createDBButton" buttonType="RAISED" layoutX="25.0" layoutY="34.0" prefWidth="150" style="-fx-background-color: #720005; -fx-text-fill: #c7c7c7;" styleClass="Positive Buttons" text="LAUNCH DATABASE" />
+             <JFXButton fx:id="deleteTableButton" buttonType="RAISED" layoutX="25.0" layoutY="396.0" prefWidth="150" style="-fx-text-fill: #c7c7c7; -fx-background-color: #720005;" text="DELETE BUTTON" />
+             <JFXButton fx:id="loadDataButton" buttonType="RAISED" layoutX="25.0" layoutY="354.0" prefWidth="150" style="-fx-background-color: #720005; -fx-text-fill: #c7c7c7;" text="LOAD BUTTON" />
+         </children>
+      </Pane>
+       <VBox>
+          <children>
+              <JFXListView fx:id="studentListView" depth="5" maxWidth="-Infinity" prefHeight="400.0" prefWidth="347.0" style="-fx-background-color: #a18a8a; -fx-border-color: #463334;" VBox.vgrow="ALWAYS">
+
+        </JFXListView>
+          </children>
+       </VBox>
+      <VBox>
+         <children>
+            <JFXTextField fx:id="idText" editable="false" focusColor="#fcfcfc" prefHeight="25.0" prefWidth="371.0" style="-fx-background-color: #a18a8a;" text="Student ID:" unFocusColor="#0d0d0d">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="fNameText" editable="false" focusColor="#fcfcfc" prefHeight="25.0" prefWidth="371.0" style="-fx-background-color: #a18a8a;" text="First Name:" unFocusColor="#0d0d0d">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="lNameText" editable="false" focusColor="#fcfcfc" prefHeight="25.0" prefWidth="371.0" style="-fx-background-color: #a18a8a;" text="Last Name:" unFocusColor="#0d0d0d">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="ageText" editable="false" focusColor="#fcfcfc" prefHeight="25.0" prefWidth="371.0" style="-fx-background-color: #a18a8a;" text="Age:" unFocusColor="#0d0d0d">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="majorText" editable="false" focusColor="#fcfcfc" prefHeight="25.0" prefWidth="371.0" style="-fx-background-color: #a18a8a;" text="Major:" unFocusColor="#0d0d0d">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="gpaText" editable="false" focusColor="#fcfcfc" prefHeight="25.0" prefWidth="371.0" style="-fx-background-color: #a18a8a;" text="GPA:" unFocusColor="#0d0d0d">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </JFXTextField>
+         </children>
+      </VBox>
+   </children>
+
+
+</HBox>
