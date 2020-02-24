@@ -1,78 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.effect.*?>
 <?import com.jfoenix.controls.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<HBox prefHeight="455.0" prefWidth="894.0" style="-fx-background-color: #720005;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<HBox prefHeight="455.0" prefWidth="852.0" style="-fx-background-color: #720005;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #440000;">
          <children>
              <JFXButton fx:id="createDBButton" buttonType="RAISED" layoutX="25.0" layoutY="34.0" prefWidth="150" style="-fx-background-color: #720005; -fx-text-fill: #c7c7c7;" styleClass="Positive Buttons" text="LAUNCH DATABASE" />
-             <JFXButton fx:id="deleteTableButton" buttonType="RAISED" layoutX="25.0" layoutY="396.0" prefWidth="150" style="-fx-text-fill: #c7c7c7; -fx-background-color: #720005;" text="DELETE BUTTON" />
-             <JFXButton fx:id="loadDataButton" buttonType="RAISED" layoutX="25.0" layoutY="354.0" prefWidth="150" style="-fx-background-color: #720005; -fx-text-fill: #c7c7c7;" text="LOAD BUTTON" />
+             <JFXButton fx:id="deleteTableButton" buttonType="RAISED" layoutX="25.0" layoutY="396.0" prefWidth="150" style="-fx-text-fill: #c7c7c7; -fx-background-color: #720005;" text="DELETE TABLE" />
+             <JFXButton fx:id="loadDataButton" buttonType="RAISED" layoutX="25.0" layoutY="354.0" prefWidth="150" style="-fx-background-color: #720005; -fx-text-fill: #c7c7c7;" text="LOAD DATA" />
          </children>
       </Pane>
        <VBox>
           <children>
               <JFXListView fx:id="studentListView" depth="5" maxWidth="-Infinity" prefHeight="400.0" prefWidth="347.0" style="-fx-background-color: #a18a8a; -fx-border-color: #463334;" VBox.vgrow="ALWAYS">
-
-        </JFXListView>
+                  
+              </JFXListView>
           </children>
        </VBox>
       <VBox>
          <children>
-            <JFXTextField fx:id="idText" editable="false" focusColor="#fcfcfc" prefHeight="25.0" prefWidth="371.0" style="-fx-background-color: #a18a8a;" text="Student ID:" unFocusColor="#0d0d0d">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-               <VBox.margin>
-                  <Insets bottom="5.0" />
-               </VBox.margin>
-            </JFXTextField>
-            <JFXTextField fx:id="fNameText" editable="false" focusColor="#fcfcfc" prefHeight="25.0" prefWidth="371.0" style="-fx-background-color: #a18a8a;" text="First Name:" unFocusColor="#0d0d0d">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-               <VBox.margin>
-                  <Insets bottom="5.0" />
-               </VBox.margin>
-            </JFXTextField>
-            <JFXTextField fx:id="lNameText" editable="false" focusColor="#fcfcfc" prefHeight="25.0" prefWidth="371.0" style="-fx-background-color: #a18a8a;" text="Last Name:" unFocusColor="#0d0d0d">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-               <VBox.margin>
-                  <Insets bottom="5.0" />
-               </VBox.margin>
-            </JFXTextField>
-            <JFXTextField fx:id="ageText" editable="false" focusColor="#fcfcfc" prefHeight="25.0" prefWidth="371.0" style="-fx-background-color: #a18a8a;" text="Age:" unFocusColor="#0d0d0d">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-               <VBox.margin>
-                  <Insets bottom="5.0" />
-               </VBox.margin>
-            </JFXTextField>
-            <JFXTextField fx:id="majorText" editable="false" focusColor="#fcfcfc" prefHeight="25.0" prefWidth="371.0" style="-fx-background-color: #a18a8a;" text="Major:" unFocusColor="#0d0d0d">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-               <VBox.margin>
-                  <Insets bottom="5.0" />
-               </VBox.margin>
-            </JFXTextField>
-            <JFXTextField fx:id="gpaText" editable="false" focusColor="#fcfcfc" prefHeight="25.0" prefWidth="371.0" style="-fx-background-color: #a18a8a;" text="GPA:" unFocusColor="#0d0d0d">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-               <VBox.margin>
-                  <Insets bottom="5.0" />
-               </VBox.margin>
-            </JFXTextField>
+            <Pane prefHeight="456.0" prefWidth="301.0">
+               <children>
+                  <JFXTextField fx:id="majorText" alignment="TOP_LEFT" editable="false" focusColor="#fcfcfc" labelFloat="true" layoutY="264.0" prefHeight="25.0" prefWidth="301.0" promptText="Major" style="-fx-background-color: #a18a8a;" unFocusColor="#0d0d0d">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="fNameText" alignment="TOP_LEFT" editable="false" focusColor="#fcfcfc" labelFloat="true" layoutY="140.0" prefHeight="25.0" prefWidth="301.0" promptText="First Name" style="-fx-background-color: #a18a8a;" unFocusColor="#0d0d0d">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="idText" alignment="TOP_LEFT" editable="false" focusColor="#fcfcfc" labelFloat="true" layoutY="25.0" prefHeight="25.0" prefWidth="301.0" promptText="Student ID" style="-fx-background-color: #a18a8a;" unFocusColor="#0d0d0d">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="lNameText" alignment="TOP_LEFT" editable="false" focusColor="#fcfcfc" labelFloat="true" layoutY="81.0" prefHeight="25.0" prefWidth="301.0" promptText="Last Name" style="-fx-background-color: #a18a8a;" unFocusColor="#0d0d0d">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="ageText" alignment="TOP_LEFT" editable="false" focusColor="#fcfcfc" labelFloat="true" layoutY="201.0" prefHeight="25.0" prefWidth="301.0" promptText="Age" style="-fx-background-color: #a18a8a;" unFocusColor="#0d0d0d">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="gpaText" alignment="TOP_LEFT" editable="false" focusColor="#fcfcfc" labelFloat="true" layoutY="325.0" prefHeight="25.0" prefWidth="301.0" promptText="GPA" style="-fx-background-color: #a18a8a;" unFocusColor="#0d0d0d">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="addNewButton" buttonType="RAISED" layoutX="27.0" layoutY="410.0" prefHeight="25.0" prefWidth="94.0" style="-fx-background-color: #440000; -fx-text-fill: #c7c7c7;" text="SUBMIT" />
+                  <JFXButton fx:id="clearButton" buttonType="RAISED" layoutX="151.0" layoutY="410.0" prefHeight="25.0" prefWidth="128.0" style="-fx-background-color: #440000; -fx-text-fill: #c7c7c7;" text="CLOSE RECORD" />
+                  <JFXToggleButton fx:id="editToggle" layoutX="74.0" layoutY="350.0" style="-jfx-toggle-color: #ff9100;" text="EDIT/ADD NEW" textFill="#f8f6f6" />
+               </children>
+            </Pane>
          </children>
       </VBox>
    </children>

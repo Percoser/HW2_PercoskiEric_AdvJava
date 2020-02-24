@@ -11,7 +11,9 @@ public class Student {
 
     @Override
     public String toString(){
-        return (this.fName + " " + this.lName);
+        return (this.fName + " "
+                + this.lName+ ", "+this.age+ ", "+this.major+ ": "+ this.gpa);
     }
+
 
 }

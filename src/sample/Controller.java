@@ -1,8 +1,5 @@
 package sample;
-import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXListView;
-import com.jfoenix.controls.JFXTabPane;
-import com.jfoenix.controls.JFXTextField;
+import com.jfoenix.controls.*;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -36,6 +33,9 @@ public class Controller implements Initializable{
     public JFXTextField majorText;
     @FXML
     public JFXTextField gpaText;
+    public JFXButton clearButton;
+    public JFXButton addNewButton;
+    public JFXToggleButton editToggle;
     @FXML
     JFXListView studentListView;
     @FXML
@@ -147,6 +147,7 @@ public class Controller implements Initializable{
                 stud0.fName = result.getString("fName");
                 stud0.lName = result.getString("lName");
                 stud0.age = result.getInt("age");
+                stud0.major = result.getString("major");
                 stud0.gpa = result.getDouble("gpa");
 
                 dbStudentList.add(stud0);
@@ -155,20 +156,10 @@ public class Controller implements Initializable{
             studentListView.setExpanded(true);
             studentListView.setItems(dbStudentList);
             studentListView.getItems();
-
-            Student selectedItem=new Student();
-            selectedItem= (Student) studentListView.getSelectionModel().getSelectedItem();
-
-            if(selectedItem==null){
+            int selectedRow = studentListView.getSelectionModel().getSelectedIndex();
+            if(selectedRow!=0){
                 studentListView.getSelectionModel().selectFirst();
             }
-            idText.setText(String.valueOf(selectedItem.studentID));
-            fNameText.setText(selectedItem.fName);
-            lNameText.setText(selectedItem.lName);
-            ageText.setText(String.valueOf(selectedItem.age));
-            majorText.setText(selectedItem.major);
-            gpaText.setText(String.valueOf(selectedItem.gpa));
-
 
             System.out.println("DATA LOADED SUCCESSFULLY");
             stmt.close();
@@ -179,8 +170,52 @@ public class Controller implements Initializable{
             System.out.println("DATA NOT LOADED");
             System.out.println(msg);
         }
+
+        studentListView.getSelectionModel().selectedItemProperty().addListener(((observableValue, o, t1) -> {
+            Student selectedItem = (Student) studentListView.getSelectionModel().getSelectedItem();
+            idText.setText(String.valueOf(selectedItem.studentID));
+            fNameText.setText(selectedItem.fName);
+            lNameText.setText(selectedItem.lName);
+            ageText.setText(String.valueOf(selectedItem.age));
+            majorText.setText(selectedItem.major);
+            gpaText.setText(String.valueOf(selectedItem.gpa));
+
+
+
+        }));
+        idText.labelFloatProperty().set(true);
+        fNameText.labelFloatProperty().set(true);
+        lNameText.labelFloatProperty().set(true);
+
     }
-//testing commit
+
+    public void addNewRecord(String url, String user, String pass, String sqlString){
+        try{
+            try {
+                Class.forName("net.sourceforge.jtds.jdbc.Driver"); //Used jTDS to connect a SQL Server DB hosted by AWS
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+                System.out.println("Connection Error");
+            }
+            Connection conn = DriverManager.getConnection(url, user ,pass);
+            Statement stmt = conn.createStatement();
+
+            stmt.executeUpdate(sqlString);
+
+        }catch(Exception e){
+            System.out.println("ERROR: THE RECORD MAY ALREADY EXIST.");
+        }
+    }
+
+    public void clearFields(){
+        idText.clear();
+        fNameText.clear();
+        lNameText.clear();
+        ageText.clear();
+        majorText.clear();
+        gpaText.clear();
+    }
+
         @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -236,7 +271,56 @@ public class Controller implements Initializable{
             }
         });
 
+        addNewButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
 
+                UUID newID = UUID.randomUUID();
+                Student studNew = new Student();
+                studNew.studentID = newID;
+                studNew.fName = fNameText.getText();
+                studNew.lName = lNameText.getText();
+                studNew.age = Integer.parseInt(ageText.getText()) ;
+                studNew.major = majorText.getText();
+                studNew.gpa = Double.parseDouble(gpaText.getText());
+
+                String sqlString="INSERT INTO Student VALUES ('"
+                        +studNew.studentID+"', '" +studNew.fName+ "', '" +studNew.lName+
+                        "', '" + studNew.age+ "', '" +studNew.major+ "', '" +studNew.gpa+ "');";
+
+                addNewRecord(AWS_URL, username, pass, sqlString);
+            }
+        });
+
+        clearButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                clearFields();
+            }
+        });
+
+        editToggle.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                if (!fNameText.isEditable()){
+                    fNameText.setEditable(true);
+                }
+                if (!lNameText.isEditable()){
+                    lNameText.setEditable(true);
+                }
+                if (!ageText.isEditable()){
+                    ageText.setEditable(true);
+                }
+                if (!majorText.isEditable()){
+                    majorText.setEditable(true);
+                }
+                if (!gpaText.isEditable()){
+                    gpaText.setEditable(true);
+                }
+                idText.clear();
+
+            }
+        });
 
 
     }
