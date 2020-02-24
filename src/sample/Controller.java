@@ -302,24 +302,24 @@ public class Controller implements Initializable{
         editToggle.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                if (!fNameText.isEditable()){
+                if (!fNameText.isEditable()) {
                     fNameText.setEditable(true);
-                }
-                if (!lNameText.isEditable()){
+                }else fNameText.setEditable(false);
+                if (!lNameText.isEditable()) {
                     lNameText.setEditable(true);
-                }
-                if (!ageText.isEditable()){
+                }else lNameText.setEditable(false);
+                if (!ageText.isEditable()) {
                     ageText.setEditable(true);
-                }
-                if (!majorText.isEditable()){
+                }else ageText.setEditable(false);
+                if (!majorText.isEditable()) {
                     majorText.setEditable(true);
-                }
-                if (!gpaText.isEditable()){
+                }else majorText.setEditable(false);
+                if (!gpaText.isEditable()) {
                     gpaText.setEditable(true);
-                }
+                }else gpaText.setEditable(false);
                 idText.clear();
-
             }
+
         });
 
 

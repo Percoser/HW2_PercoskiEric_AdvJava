@@ -57,7 +57,7 @@
                   </JFXTextField>
                   <JFXButton fx:id="addNewButton" buttonType="RAISED" layoutX="27.0" layoutY="410.0" prefHeight="25.0" prefWidth="94.0" style="-fx-background-color: #440000; -fx-text-fill: #c7c7c7;" text="SUBMIT" />
                   <JFXButton fx:id="clearButton" buttonType="RAISED" layoutX="151.0" layoutY="410.0" prefHeight="25.0" prefWidth="128.0" style="-fx-background-color: #440000; -fx-text-fill: #c7c7c7;" text="CLOSE RECORD" />
-                  <JFXToggleButton fx:id="editToggle" layoutX="74.0" layoutY="350.0" style="-jfx-toggle-color: #ff9100;" text="EDIT/ADD NEW" textFill="#f8f6f6" />
+                  <JFXToggleButton unToggleColor="darkred" fx:id="editToggle" layoutX="74.0" layoutY="350.0" style="-jfx-toggle-color: #ff9100;" text="EDIT/ADD NEW" textFill="#f8f6f6" />
                </children>
             </Pane>
          </children>
