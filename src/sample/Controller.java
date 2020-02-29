@@ -71,6 +71,7 @@ public class Controller implements Initializable{
                         "gpa DECIMAL" +
                         ");"
                 );
+
                 System.out.println("TABLE CREATED SUCCESSFULLY");
             }
             catch (Exception ex){
@@ -117,6 +118,7 @@ public class Controller implements Initializable{
             Connection conn = DriverManager.getConnection(url, user ,pass);
             Statement stmt = conn.createStatement();
             stmt.execute("DROP TABLE Student");
+            studentListView.getItems();
             stmt.close();
             conn.close();
             System.out.println("TABLE DROPPED SUCCESSFULLY");

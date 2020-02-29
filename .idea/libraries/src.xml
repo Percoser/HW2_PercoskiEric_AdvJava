@@ -1,0 +1,29 @@
+<component name="libraryTable">
+  <library name="src">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://C:/Program Files/Java/Alexa SDK/alexa-skills-kit-sdk-for-java-2.0.x/ask-sdk-apache-client/src" />
+      <root url="file://C:/Program Files/Java/Alexa SDK/alexa-skills-kit-sdk-for-java-2.0.x/ask-sdk-apache-client/tst" />
+      <root url="file://C:/Program Files/Java/Alexa SDK/alexa-skills-kit-sdk-for-java-2.0.x/ask-sdk-core/src" />
+      <root url="file://C:/Program Files/Java/Alexa SDK/alexa-skills-kit-sdk-for-java-2.0.x/ask-sdk-core/tst" />
+      <root url="file://C:/Program Files/Java/Alexa SDK/alexa-skills-kit-sdk-for-java-2.0.x/ask-sdk-dynamodb-persistence-adapter/src" />
+      <root url="file://C:/Program Files/Java/Alexa SDK/alexa-skills-kit-sdk-for-java-2.0.x/ask-sdk-dynamodb-persistence-adapter/tst" />
+      <root url="file://C:/Program Files/Java/Alexa SDK/alexa-skills-kit-sdk-for-java-2.0.x/ask-sdk-freemarker/src" />
+      <root url="file://C:/Program Files/Java/Alexa SDK/alexa-skills-kit-sdk-for-java-2.0.x/ask-sdk-freemarker/tst" />
+      <root url="file://C:/Program Files/Java/Alexa SDK/alexa-skills-kit-sdk-for-java-2.0.x/ask-sdk-lambda-support/src" />
+      <root url="file://C:/Program Files/Java/Alexa SDK/alexa-skills-kit-sdk-for-java-2.0.x/ask-sdk-lambda-support/tst" />
+      <root url="file://C:/Program Files/Java/Alexa SDK/alexa-skills-kit-sdk-for-java-2.0.x/ask-sdk-runtime/src" />
+      <root url="file://C:/Program Files/Java/Alexa SDK/alexa-skills-kit-sdk-for-java-2.0.x/ask-sdk-runtime/tst" />
+      <root url="file://C:/Program Files/Java/Alexa SDK/alexa-skills-kit-sdk-for-java-2.0.x/ask-sdk-servlet-support/src" />
+      <root url="file://C:/Program Files/Java/Alexa SDK/alexa-skills-kit-sdk-for-java-2.0.x/ask-sdk-servlet-support/tst" />
+      <root url="file://C:/Program Files/Java/Alexa SDK/alexa-skills-kit-sdk-for-java-2.0.x/ask-sdk/src" />
+      <root url="file://C:/Program Files/Java/Alexa SDK/alexa-skills-kit-sdk-for-java-2.0.x/ask-sdk/tst" />
+      <root url="file://C:/Program Files/Java/Alexa SDK/alexa-skills-kit-sdk-for-java-2.0.x/ask-smapi-sdk/src" />
+      <root url="file://C:/Program Files/Java/Alexa SDK/alexa-skills-kit-sdk-for-java-2.0.x/ask-smapi-sdk/tst" />
+      <root url="file://C:/Program Files/Java/Alexa SDK/alexa-skills-kit-sdk-for-java-2.0.x/samples/colorpicker/src" />
+      <root url="file://C:/Program Files/Java/Alexa SDK/alexa-skills-kit-sdk-for-java-2.0.x/samples/helloworld/src" />
+      <root url="file://C:/Program Files/Java/Alexa SDK/alexa-skills-kit-sdk-for-java-2.0.x/samples/helloworldservlet/src/main/java" />
+    </SOURCES>
+  </library>
+</component>

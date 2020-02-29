@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox prefHeight="455.0" prefWidth="852.0" style="-fx-background-color: #720005;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #440000;">
+         <children>
+             <JFXButton fx:id="homeButt" buttonType="RAISED" layoutX="25.0" layoutY="34.0" prefWidth="150" style="-fx-background-color: #720005; -fx-text-fill: #c7c7c7;" styleClass="Positive Buttons" text="&lt;--BACK" />
+             <JFXButton fx:id="orderHistoryButt" buttonType="RAISED" layoutX="25.0" layoutY="396.0" prefWidth="150" style="-fx-text-fill: #c7c7c7; -fx-background-color: #720005;" text="VIEW ORDER HISTORY" />
+             <JFXButton fx:id="newOrderButt" buttonType="RAISED" layoutX="25.0" layoutY="354.0" prefWidth="150" style="-fx-background-color: #720005; -fx-text-fill: #c7c7c7;" text="START NEW ORDER" />
+         </children>
+      </Pane>
+       <VBox />
+      <VBox prefHeight="455.0" prefWidth="646.0">
+         <children>
+            <Pane prefHeight="181.0" prefWidth="714.0">
+               <children>
+                  <JFXTextField fx:id="majorText" alignment="TOP_LEFT" editable="false" focusColor="#fcfcfc" labelFloat="true" layoutX="231.0" layoutY="52.0" prefHeight="25.0" prefWidth="150.0" promptText="Major" style="-fx-background-color: #a18a8a;" unFocusColor="#0d0d0d">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="fNameText" alignment="TOP_LEFT" editable="false" focusColor="#fcfcfc" labelFloat="true" layoutY="79.0" prefHeight="25.0" prefWidth="224.0" promptText="First Name" style="-fx-background-color: #a18a8a;" unFocusColor="#0d0d0d">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="idText" alignment="TOP_LEFT" editable="false" focusColor="#fcfcfc" labelFloat="true" layoutY="25.0" prefHeight="25.0" prefWidth="224.0" promptText="Student ID" style="-fx-background-color: #a18a8a;" unFocusColor="#0d0d0d">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="lNameText" alignment="TOP_LEFT" editable="false" focusColor="#fcfcfc" labelFloat="true" layoutY="52.0" prefHeight="25.0" prefWidth="224.0" promptText="Last Name" style="-fx-background-color: #a18a8a;" unFocusColor="#0d0d0d">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="ageText" alignment="TOP_LEFT" editable="false" focusColor="#fcfcfc" labelFloat="true" layoutX="231.0" layoutY="25.0" prefHeight="25.0" prefWidth="150.0" promptText="Age" style="-fx-background-color: #a18a8a;" unFocusColor="#0d0d0d">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="gpaText" alignment="TOP_LEFT" editable="false" focusColor="#fcfcfc" labelFloat="true" layoutX="231.0" layoutY="79.0" prefHeight="25.0" prefWidth="150.0" promptText="GPA" style="-fx-background-color: #a18a8a;" unFocusColor="#0d0d0d">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="submitOrdButt" buttonType="RAISED" layoutX="112.0" layoutY="118.0" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #440000; -fx-text-fill: #c7c7c7;" text="CONFIRM ORDER" />
+                  <JFXButton fx:id="cancelOrdButt" buttonType="RAISED" layoutX="242.0" layoutY="118.0" prefHeight="25.0" prefWidth="128.0" style="-fx-background-color: #440000; -fx-text-fill: #c7c7c7;" text="CANCEL ORDER" />
+               </children>
+            </Pane>
+            <TableView prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn editable="false" prefWidth="116.0" text="Product #" />
+                <TableColumn editable="false" prefWidth="318.0" text="Product Desc." />
+                  <TableColumn editable="false" prefWidth="66.0" text="Qty." />
+                  <TableColumn editable="false" prefWidth="75.0" text="Star Value" />
+                  <TableColumn editable="false" prefWidth="68.0" text="Sub Total" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+
+
+</HBox>
