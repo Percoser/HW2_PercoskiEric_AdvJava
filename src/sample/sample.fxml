@@ -13,7 +13,7 @@
              <JFXButton fx:id="deleteTableButton" buttonType="RAISED" layoutX="25.0" layoutY="396.0" prefWidth="150" style="-fx-text-fill: #c7c7c7; -fx-background-color: #720005;" text="DELETE TABLE" />
              <JFXButton fx:id="loadDataButton" buttonType="RAISED" layoutX="25.0" layoutY="354.0" prefWidth="150" style="-fx-background-color: #720005; -fx-text-fill: #c7c7c7;" text="RELOAD DATA" />
             <JFXCheckBox fx:id="filterAgeCheck" checkedColor="#ff9100" layoutX="24.0" layoutY="146.0" text="Filter by Age" textFill="#f5f3f3" unCheckedColor="DARKRED" />
-            <JFXTextField fx:id="ageTextFilter" alignment="TOP_LEFT" focusColor="#f2f2f5" labelFloat="true" layoutX="130.0" layoutY="141.0" prefHeight="25.0" prefWidth="56.0" promptText="#" style="-fx-background-color: #a18a8a;" text="10" />
+            <JFXTextField fx:id="ageTextFilter" alignment="TOP_LEFT" focusColor="#f2f2f5" labelFloat="true" layoutX="130.0" layoutY="141.0" prefHeight="25.0" prefWidth="56.0" promptText="&gt;" style="-fx-background-color: #a18a8a;" text="10" />
             <JFXCheckBox fx:id="filterMajorCheck" checkedColor="#ff9100" layoutX="24.0" layoutY="192.0" text="Filter by Major" textFill="#f5f3f3" unCheckedColor="DARKRED" />
             <JFXCheckBox fx:id="filterCheckGPA" checkedColor="#ff9100" layoutX="24.0" layoutY="238.0" text="Filter by GPA" textFill="#f5f3f3" unCheckedColor="DARKRED" />
             <JFXTextField fx:id="gpaTextFilter" alignment="TOP_LEFT" focusColor="#f2f2f5" labelFloat="true" layoutX="130.0" layoutY="233.0" prefHeight="25.0" prefWidth="56.0" promptText="&gt;" style="-fx-background-color: #a18a8a;" text="3.0" />

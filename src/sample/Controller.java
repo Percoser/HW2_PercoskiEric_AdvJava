@@ -88,7 +88,7 @@ public class Controller implements Initializable{
                 for(int i=0; i<10; i++){
                     UUID newID = UUID.randomUUID();
                     Random r = new Random();
-                    int index = r.nextInt(2 + 1-0) + 0;
+                    int index = r.nextInt(2 + 1 - 0);
                     majorDrop.getSelectionModel().select(index);
                     Student studNew = new Student();
                     studNew.studentID = newID;
@@ -96,7 +96,7 @@ public class Controller implements Initializable{
                     studNew.lName = "Student " +i;
                     studNew.age = new Random().nextInt(65 + 1 - 17) + 17;
                     studNew.major = (String) majorDrop.getSelectionModel().getSelectedItem();
-                    studNew.gpa = 0.0 + (4.0 - 0.0) * r.nextDouble();
+                    studNew.gpa = 2.0 + (2.0) * r.nextDouble();
                     stmt.executeUpdate("INSERT INTO Student VALUES ('"
                     +studNew.studentID+"', '" +studNew.fName+ "', '" +studNew.lName+
                     "', '" + studNew.age+ "', '" +studNew.major+ "', '" +studNew.gpa+ "');"
@@ -381,27 +381,27 @@ public class Controller implements Initializable{
                 String majorVariable = "";
                 String gpaVariable = "";
                 if(filterAgeCheck.isSelected()) {
-                    ageVariable = "age= "+ageTextFilter.getText();
+                    ageVariable = "age > "+ageTextFilter.getText();
 
                     if(filterMajorCheck.isSelected()) {
-                        majorVariable = " AND major= '"+(String) majorDrop.getSelectionModel().getSelectedItem() + "'";
+                        majorVariable = "AND major= '"+(String) majorDrop.getSelectionModel().getSelectedItem() + "'";
 
                         if(filterCheckGPA.isSelected()){
-                            gpaVariable = " AND gpa > " +gpaTextFilter.getText();
+                            gpaVariable = "AND gpa > " +gpaTextFilter.getText();
 
                         }
                     }else if(filterCheckGPA.isSelected()){
-                        gpaVariable = " AND gpa > " +gpaTextFilter.getText();
+                        gpaVariable = " gpa > " +gpaTextFilter.getText();
                     }
                 }else if(filterMajorCheck.isSelected()) {
-                    majorVariable = " AND major= '"+(String) majorDrop.getSelectionModel().getSelectedItem() + "'";
+                    majorVariable = " major= '"+(String) majorDrop.getSelectionModel().getSelectedItem() + "'";
 
                     if(filterCheckGPA.isSelected()){
-                        gpaVariable = " AND gpa > " +gpaTextFilter.getText();
+                        gpaVariable = "AND gpa > " +gpaTextFilter.getText();
 
                     }
                 }else if(filterCheckGPA.isSelected()){
-                    gpaVariable = " AND gpa > " +gpaTextFilter.getText();
+                    gpaVariable = " gpa > " +gpaTextFilter.getText();
                 }
 
                 String filter= ageVariable + majorVariable + gpaVariable;
@@ -419,23 +419,23 @@ public class Controller implements Initializable{
                 if(filterCheckGPA.isSelected()){
                     gpaVariable = "gpa > " +gpaTextFilter.getText();
                     if(filterAgeCheck.isSelected()) {
-                        ageVariable = " AND age= "+ageTextFilter.getText();
+                        ageVariable = " AND age > "+ageTextFilter.getText();
                         if(filterMajorCheck.isSelected()) {
                             majorVariable = " AND major= '"+(String) majorDrop.getSelectionModel().getSelectedItem() + "'";
                         }
                     }else if(filterMajorCheck.isSelected()) {
-                        majorVariable = " AND major= '"+(String) majorDrop.getSelectionModel().getSelectedItem() + "'";
+                        majorVariable = " major= '"+(String) majorDrop.getSelectionModel().getSelectedItem() + "'";
                     }
                 }else if(filterAgeCheck.isSelected()) {
-                    ageVariable = " AND age= "+ageTextFilter.getText();
+                    ageVariable = " age > "+ageTextFilter.getText();
                     if(filterMajorCheck.isSelected()) {
                         majorVariable = " AND major= '"+(String) majorDrop.getSelectionModel().getSelectedItem() + "'";
                     }
                 }else if(filterMajorCheck.isSelected()) {
-                    majorVariable = " AND major= '"+(String) majorDrop.getSelectionModel().getSelectedItem() + "'";
+                    majorVariable = " major= '"+(String) majorDrop.getSelectionModel().getSelectedItem() + "'";
                 }
 
-                String filter= ageVariable + majorVariable + gpaVariable;
+                String filter= gpaVariable + ageVariable + majorVariable  ;
                 filterData(AWS_URL, username, pass, filter);
             }
         });
@@ -455,21 +455,21 @@ public class Controller implements Initializable{
                     if (filterCheckGPA.isSelected()) {
                         gpaVariable = " AND gpa > " +gpaTextFilter.getText();
                         if (filterAgeCheck.isSelected()) {
-                            ageVariable = " AND age= "+ageTextFilter.getText();
+                            ageVariable = " AND age > "+ageTextFilter.getText();
                         }
                     } else if (filterAgeCheck.isSelected()) {
-                        ageVariable = " AND age= "+ageTextFilter.getText();
+                        ageVariable = " age > "+ageTextFilter.getText();
                     }
                 }else if (filterCheckGPA.isSelected()) {
-                    gpaVariable = " AND gpa > " +gpaTextFilter.getText();
+                    gpaVariable = " gpa > " +gpaTextFilter.getText();
                     if (filterAgeCheck.isSelected()) {
-                        ageVariable = " AND age= "+ageTextFilter.getText();
+                        ageVariable = " AND age > "+ageTextFilter.getText();
                     }
                 } else if (filterAgeCheck.isSelected()) {
-                    ageVariable = " AND age= "+ageTextFilter.getText();
+                    ageVariable = " age > "+ageTextFilter.getText();
                 }
 
-                String filter= ageVariable + majorVariable + gpaVariable;
+                String filter= majorVariable + gpaVariable + ageVariable;
                 filterData(AWS_URL, username, pass, filter);
             }
         });
