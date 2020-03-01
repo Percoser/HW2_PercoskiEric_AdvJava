@@ -7,50 +7,58 @@
 
 <HBox prefHeight="455.0" prefWidth="852.0" style="-fx-background-color: #720005;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #440000;">
+      <Pane prefHeight="455.0" prefWidth="221.0" style="-fx-background-color: #440000;">
          <children>
              <JFXButton fx:id="createDBButton" buttonType="RAISED" layoutX="25.0" layoutY="34.0" prefWidth="150" style="-fx-background-color: #720005; -fx-text-fill: #c7c7c7;" styleClass="Positive Buttons" text="LAUNCH DATABASE" />
              <JFXButton fx:id="deleteTableButton" buttonType="RAISED" layoutX="25.0" layoutY="396.0" prefWidth="150" style="-fx-text-fill: #c7c7c7; -fx-background-color: #720005;" text="DELETE TABLE" />
-             <JFXButton fx:id="loadDataButton" buttonType="RAISED" layoutX="25.0" layoutY="354.0" prefWidth="150" style="-fx-background-color: #720005; -fx-text-fill: #c7c7c7;" text="LOAD DATA" />
+             <JFXButton fx:id="loadDataButton" buttonType="RAISED" layoutX="25.0" layoutY="354.0" prefWidth="150" style="-fx-background-color: #720005; -fx-text-fill: #c7c7c7;" text="RELOAD DATA" />
+            <JFXCheckBox fx:id="filterAgeCheck" checkedColor="#ff9100" layoutX="24.0" layoutY="146.0" text="Filter by Age" textFill="#f5f3f3" unCheckedColor="DARKRED" />
+            <JFXTextField fx:id="ageTextFilter" alignment="TOP_LEFT" focusColor="#f2f2f5" labelFloat="true" layoutX="130.0" layoutY="141.0" prefHeight="25.0" prefWidth="56.0" promptText="#" style="-fx-background-color: #a18a8a;" text="10" />
+            <JFXCheckBox fx:id="filterMajorCheck" checkedColor="#ff9100" layoutX="24.0" layoutY="192.0" text="Filter by Major" textFill="#f5f3f3" unCheckedColor="DARKRED" />
+            <JFXCheckBox fx:id="filterCheckGPA" checkedColor="#ff9100" layoutX="24.0" layoutY="238.0" text="Filter by GPA" textFill="#f5f3f3" unCheckedColor="DARKRED" />
+            <JFXTextField fx:id="gpaTextFilter" alignment="TOP_LEFT" focusColor="#f2f2f5" labelFloat="true" layoutX="130.0" layoutY="233.0" prefHeight="25.0" prefWidth="56.0" promptText="&gt;" style="-fx-background-color: #a18a8a;" text="3.0" />
+            <JFXComboBox fx:id="majorDrop" focusColor="#f3f3f5" layoutX="130.0" layoutY="189.0" style="-fx-background-color: #a18a8a;" visibleRowCount="3" />
          </children>
       </Pane>
        <VBox>
           <children>
-              <JFXListView fx:id="studentListView" depth="5" maxWidth="-Infinity" prefHeight="400.0" prefWidth="347.0" style="-fx-background-color: #a18a8a; -fx-border-color: #463334;" VBox.vgrow="ALWAYS">
-                  
-              </JFXListView>
+            <Pane prefHeight="455.0" prefWidth="351.0">
+               <children>
+                  <JFXListView fx:id="studentListView" prefHeight="455.0" prefWidth="333.0" style="-fx-background-color: #a18a8a;" />
+               </children>
+            </Pane>
           </children>
        </VBox>
       <VBox>
          <children>
-            <Pane prefHeight="456.0" prefWidth="301.0">
+            <Pane prefHeight="456.0" prefWidth="303.0">
                <children>
-                  <JFXTextField fx:id="majorText" alignment="TOP_LEFT" editable="false" focusColor="#fcfcfc" labelFloat="true" layoutY="264.0" prefHeight="25.0" prefWidth="301.0" promptText="Major" style="-fx-background-color: #a18a8a;" unFocusColor="#0d0d0d">
+                  <JFXTextField fx:id="majorText" alignment="TOP_LEFT" editable="false" focusColor="#fcfcfc" labelFloat="true" layoutX="-8.0" layoutY="264.0" prefHeight="25.0" prefWidth="301.0" promptText="Major" style="-fx-background-color: #a18a8a;" unFocusColor="#0d0d0d">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </JFXTextField>
-                  <JFXTextField fx:id="fNameText" alignment="TOP_LEFT" editable="false" focusColor="#fcfcfc" labelFloat="true" layoutY="140.0" prefHeight="25.0" prefWidth="301.0" promptText="First Name" style="-fx-background-color: #a18a8a;" unFocusColor="#0d0d0d">
+                  <JFXTextField fx:id="fNameText" alignment="TOP_LEFT" editable="false" focusColor="#fcfcfc" labelFloat="true" layoutX="-8.0" layoutY="140.0" prefHeight="25.0" prefWidth="301.0" promptText="First Name" style="-fx-background-color: #a18a8a;" unFocusColor="#0d0d0d">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </JFXTextField>
-                  <JFXTextField fx:id="idText" alignment="TOP_LEFT" editable="false" focusColor="#fcfcfc" labelFloat="true" layoutY="25.0" prefHeight="25.0" prefWidth="301.0" promptText="Student ID" style="-fx-background-color: #a18a8a;" unFocusColor="#0d0d0d">
+                  <JFXTextField fx:id="idText" alignment="TOP_LEFT" editable="false" focusColor="#fcfcfc" labelFloat="true" layoutX="-8.0" layoutY="25.0" prefHeight="25.0" prefWidth="301.0" promptText="Student ID" style="-fx-background-color: #a18a8a;" unFocusColor="#0d0d0d">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </JFXTextField>
-                  <JFXTextField fx:id="lNameText" alignment="TOP_LEFT" editable="false" focusColor="#fcfcfc" labelFloat="true" layoutY="81.0" prefHeight="25.0" prefWidth="301.0" promptText="Last Name" style="-fx-background-color: #a18a8a;" unFocusColor="#0d0d0d">
+                  <JFXTextField fx:id="lNameText" alignment="TOP_LEFT" editable="false" focusColor="#fcfcfc" labelFloat="true" layoutX="-8.0" layoutY="81.0" prefHeight="25.0" prefWidth="301.0" promptText="Last Name" style="-fx-background-color: #a18a8a;" unFocusColor="#0d0d0d">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </JFXTextField>
-                  <JFXTextField fx:id="ageText" alignment="TOP_LEFT" editable="false" focusColor="#fcfcfc" labelFloat="true" layoutY="201.0" prefHeight="25.0" prefWidth="301.0" promptText="Age" style="-fx-background-color: #a18a8a;" unFocusColor="#0d0d0d">
+                  <JFXTextField fx:id="ageText" alignment="TOP_LEFT" editable="false" focusColor="#fcfcfc" labelFloat="true" layoutX="-8.0" layoutY="201.0" prefHeight="25.0" prefWidth="301.0" promptText="Age" style="-fx-background-color: #a18a8a;" unFocusColor="#0d0d0d">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </JFXTextField>
-                  <JFXTextField fx:id="gpaText" alignment="TOP_LEFT" editable="false" focusColor="#fcfcfc" labelFloat="true" layoutY="325.0" prefHeight="25.0" prefWidth="301.0" promptText="GPA" style="-fx-background-color: #a18a8a;" unFocusColor="#0d0d0d">
+                  <JFXTextField fx:id="gpaText" alignment="TOP_LEFT" editable="false" focusColor="#fcfcfc" labelFloat="true" layoutX="-8.0" layoutY="325.0" prefHeight="25.0" prefWidth="301.0" promptText="GPA" style="-fx-background-color: #a18a8a;" unFocusColor="#0d0d0d">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
